@@ -114,18 +114,7 @@ $(".card .list-group").sortable({
   scroll: false,
   tolerance: "pointer",
   helper: "clone",
-  // activate: function (event) {
-  //   console.log("activate", this);
-  // },
-  // deactivate: function (event) {
-  //   console.log("deactivate", this);
-  // },
-  // over: function (event) {
-  //   console.log("over", event.target);
-  // },
-  // out: function (event) {
-  //   console.log("out", event.target);
-  // },
+  
   update: function (event) {
     // loop over current set of children in sortable list
     // array to store the task data in
@@ -159,12 +148,6 @@ $("#trash").droppable({
   tolerance: "touch",
   drop: function (event, ui) {
     ui.draggable.remove();
-  },
-  over: function (event, ui) {
-    console.log("over");
-  },
-  out: function (event, ui) {
-    console.log("out");
   },
 });
 
